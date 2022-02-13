@@ -14,11 +14,13 @@ body {
 
 .container {
   display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 4fr;
+  min-height: 100vh;
+  grid-template-columns: max-content 1fr;
   grid-template-rows: 1fr 4fr;
   font-family: Roboto;
 }
+
+/* Header styling */
 
 header {
   grid-column: 2 / 5;
@@ -29,10 +31,10 @@ header {
   padding: 16px 32px;
   font-weight: 700;
   box-shadow: 0 3px 5px rgb(207, 207, 207);
-  position: relative;
+  z-index: 1;
 }
 
-/* Header search styling */
+/* Header search */
 
 .search {
   display: flex;
@@ -47,7 +49,6 @@ header {
 .notif-icon {
   min-width: var(--search-height);
   min-height: var(--search-height);
-  border: 1px solid;
 }
 
 .search-bar {
@@ -59,7 +60,7 @@ header {
   padding: 0 16px;
 }
 
-/* Header profile styling */
+/* Header profile */
 
 .profile {
   display: flex;
@@ -74,11 +75,11 @@ header {
   border: 1px solid;
 }
 
-/* Header greeting styling */
+/* Header greeting */
 
 .greeting {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: max-content 1fr;
   align-items: center;
 }
 
@@ -87,7 +88,6 @@ header {
   align-self: center;
   min-width: 50px;
   min-height: 50px;
-  border: 1px solid;
   margin-right: 16px;
 }
 
@@ -99,7 +99,7 @@ header {
   font-size: 1.5rem;
 }
 
-/* Header buttons styling */
+/* Header buttons */
 
 .header-buttons {
   display: flex;
@@ -118,11 +118,62 @@ header {
   font-weight: 700;
 }
 
+.header-buttons > button:hover {
+  background-color: #40b9ff;
+}
+
+/* Sidebar styling */
+
 .sidebar {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px;
   background-color: var(--blue);
+  z-index: 2;
+  font-weight: 700;
 }
+
+/* Sidebar sections */
+
+.dashboard-top,
+.dashboard-middle,
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Sidebar title */
+
+.dash-title-icon {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.dash-title-text {
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Sidebar links */
+
+.dashboard-middle > img,
+.dashboard-bottom > img {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Main content styling */
 
 .main-content {
   grid-column: 2 / 3;
