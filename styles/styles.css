@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #0080ca;
+  --search-height: 32px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+  font-family: Roboto;
+}
+
+header {
+  grid-column: 2 / 5;
+  display: grid;
+  grid-template-columns: minmax(max-content, 2fr) minmax(max-content, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+  padding: 16px 32px;
+  font-weight: 700;
+  box-shadow: 0 3px 5px rgb(207, 207, 207);
+  position: relative;
+}
+
+/* Header search styling */
+
+.search {
+  display: flex;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-icon,
+.notif-icon {
+  min-width: var(--search-height);
+  min-height: var(--search-height);
+  border: 1px solid;
+}
+
+.search-bar {
+  flex: 1;
+  height: var(--search-height);
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 25px;
+  padding: 0 16px;
+}
+
+/* Header profile styling */
+
+.profile {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 32px;
+}
+
+.profile-icon {
+  min-width: 48px;
+  min-height: 48px;
+  border: 1px solid;
+}
+
+/* Header greeting styling */
+
+.greeting {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.greeting-icon {
+  grid-row: 1 / 3;
+  align-self: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 1px solid;
+  margin-right: 16px;
+}
+
+.greeting-text {
+  font-size: 0.8rem;
+}
+
+.greeting-name {
+  font-size: 1.5rem;
+}
+
+/* Header buttons styling */
+
+.header-buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-buttons > button {
+  width: 80px;
+  height: 35px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-color: var(--blue);
+}
+
+.main-content {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: #eeeeee;
+}
