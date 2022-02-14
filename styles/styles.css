@@ -28,7 +28,6 @@ header {
   display: grid;
   grid-template-columns: minmax(max-content, 2fr) minmax(max-content, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 16px;
   padding: 16px 32px;
   font-weight: 700;
   box-shadow: 0 3px 5px rgb(207, 207, 207);
@@ -48,8 +47,8 @@ header {
 
 .search-icon,
 .notif-icon {
-  min-width: var(--search-height);
-  min-height: var(--search-height);
+  width: var(--search-height);
+  height: var(--search-height);
 }
 
 .search-bar {
@@ -71,9 +70,9 @@ header {
 }
 
 .profile-icon {
-  min-width: 48px;
-  min-height: 48px;
-  border: 1px solid;
+  width: 48px;
+  height: 48px;
+  color: red;
 }
 
 /* Header greeting */
@@ -85,11 +84,14 @@ header {
 }
 
 .greeting-icon {
-  grid-row: 1 / 3;
-  align-self: center;
-  min-width: 50px;
-  min-height: 50px;
+  grid-row: 1 / 2;
+  width: 60px;
+  height: 60px;
   margin-right: 16px;
+}
+
+.greeting-text-group {
+  display: grid;
 }
 
 .greeting-text {
@@ -151,8 +153,8 @@ header {
 /* Sidebar title */
 
 .dash-title-icon {
-  min-width: 48px;
-  min-height: 48px;
+  width: 48px;
+  height: 48px;
 }
 
 .dash-title-text {
@@ -164,8 +166,8 @@ header {
 
 .dashboard-middle > img,
 .dashboard-bottom > img {
-  min-width: 20px;
-  min-height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .sidebar a {
@@ -252,8 +254,8 @@ header {
 }
 
 .project-card-icons > img {
-  min-width: 20px;
-  min-height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Main content extra info */
@@ -287,7 +289,7 @@ header {
 
 .trending-icon {
   grid-row: 1 / 3;
-  min-width: 48px;
-  min-height: 48px;
+  width: 48px;
+  height: 48px;
   margin-right: 16px;
 }
