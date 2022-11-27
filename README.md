@@ -1,4 +1,4 @@
-## Project description
+# The Odin Project: Admin Dashboard
 This is my attempt at the Admin Dashboard project from The Odin Project. The goal is to replicate the given website design as closely as possible.
 
 More information here: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard
